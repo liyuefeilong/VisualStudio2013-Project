@@ -15,45 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PatternDetector.h">
+    <ClInclude Include="ImageRecognition.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Pattern.h">
+    <ClInclude Include="Plate.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CameraCalibration.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GeometryTypes.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ARPipeline.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ARDrawingContext.h">
+    <ClInclude Include="OCR.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PatternDetector.cpp">
+    <ClCompile Include="ImageRecognition.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GeometryTypes.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CameraCalibration.cpp">
+    <ClCompile Include="Plate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ARPipeline.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ARDrawingContext.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Pattern.cpp">
+    <ClCompile Include="OCR.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8FD9A0B9-D51D-4809-8A6A-6145622E0CF9}</ProjectGuid>
+    <ProjectGuid>{62FE6B16-1F71-4EB4-B807-AF2E466A5006}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>AugmentedReality</RootNamespace>
+    <RootNamespace>NumberPlateRecognition</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -34,7 +34,6 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="opencv.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -42,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <IncludePath>D:\opencv\build\include;D:\opencv\build\include\opencv;D:\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
     <LibraryPath>D:\opencv\build\x86\vc12\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -54,13 +53,13 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_calib3d2411d.dll;opencv_contrib2411d.dll;opencv_core2411d.dll;opencv_features2d2411d.dll;opencv_ffmpeg2411d.dll;opencv_flann2411d.dll;opencv_gpu2411d.dll;opencv_highgui2411d.dll;opencv_imgproc2411d.dll;opencv_legacy2411d.dll;opencv_ml2411d.dll;opencv_nonfree2411d.dll;opencv_objdetect2411d.dll;opencv_ocl2411d.dll;opencv_photo2411d.dll;opencv_stitching2411d.dll;opencv_superres2411d.dll;opencv_video2411d.dll;opencv_videostab2411d.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_calib3d2411d.lib;opencv_contrib2411d.lib;opencv_core2411d.lib;opencv_features2d2411d.lib;opencv_flann2411d.lib;opencv_gpu2411d.lib;opencv_highgui2411d.lib;opencv_imgproc2411d.lib;opencv_legacy2411d.lib;opencv_ml2411d.lib;opencv_nonfree2411d.lib;opencv_objdetect2411d.lib;opencv_ocl2411d.lib;opencv_photo2411d.lib;opencv_stitching2411d.lib;opencv_superres2411d.lib;opencv_video2411d.lib;opencv_videostab2411d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,21 +81,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ARDrawingContext.h" />
-    <ClInclude Include="ARPipeline.h" />
-    <ClInclude Include="CameraCalibration.h" />
-    <ClInclude Include="GeometryTypes.h" />
-    <ClInclude Include="Pattern.h" />
-    <ClInclude Include="PatternDetector.h" />
+    <ClInclude Include="ImageRecognition.h" />
+    <ClInclude Include="OCR.h" />
+    <ClInclude Include="Plate.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ARDrawingContext.cpp" />
-    <ClCompile Include="ARPipeline.cpp" />
-    <ClCompile Include="CameraCalibration.cpp" />
-    <ClCompile Include="GeometryTypes.cpp" />
+    <ClCompile Include="ImageRecognition.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pattern.cpp" />
-    <ClCompile Include="PatternDetector.cpp" />
+    <ClCompile Include="OCR.cpp" />
+    <ClCompile Include="Plate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
